@@ -12,6 +12,7 @@
 		@include tablet {
 			padding: 20px;
 		}
+		
 		.header {
 			background-color: themed("bgSoft");
 			color: themed("textColor");
@@ -23,20 +24,23 @@
 				// margin-top: 20px;
 				font-size: 60px;
 				font-weight: 400;
+				font-family: Georgia, 'Times New Roman', Times, serif;
 			}
 			h2 {
 				margin: 30px 0;
 				margin-bottom: 40px;
 				font-weight: 100;
 				font-size: 25px;
+				font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 			}
 			.car {
 				margin-top: 50px;
 				padding: 0 50px;
 				div {
 					img {
-						width: 100%;
+						width: 80%;
 						border-radius: 10px;
+						height: 420px;
 					}
 					.label {
 						margin-top: 20px;
@@ -51,39 +55,58 @@
 			}
 		}
 		.body {
+			background-color: themed("bgSoft");
 			.services {
-				background-color: themed("bg");
+				background-color: themed("bgSoft");
 				color: themed("textColor");
 				padding-bottom: 100px;
 				font-size: 40px;
+				//margin-top: 150px;
 				.headd {
-					margin: 80px 0;
+					
 					font-weight: 300;
 					display: flex;
 					align-items: center;
 					justify-content: center;
+					font-family: Verdana, Geneva, Tahoma, sans-serif;
 				}
 				.upper {
 					font-size: 20px;
-					margin: 40px 0;
+                    margin-left: 150px;
+                    margin-right: 150px;
 					display: flex;
 					align-items: center;
 					flex-direction: row;
 					justify-content: space-around;
 					.left {
-						background-color: themed("bgSoft");
+						
 						border-radius: 20px;
 						padding: 20px;
-						width: 800px;
-						height: 200px;
+						width: 700px;
+						height: 270px;
+						margin-left: 150px;
+						margin-top: 20px;
+						transition: transform .2s;
+						cursor: pointer;
 					}
+					.left:hover {
+						transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+					  }
 					.right {
-						background-color: themed("bgSoft");
+					
 						border-radius: 20px;
 						padding: 20px;
-						width: 800px;
-						height: 200px;
+						width: 700px;
+						height: 270px;
+						margin-right: 150px;
+						//margin-left: 10px;
+						margin-top: 20px;
+						transition: transform .2s;
+						cursor: pointer;
 					}
+					.right:hover {
+						transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+					  }
 				}
 				.lower {
 					font-size: 20px;
@@ -91,30 +114,53 @@
 					align-items: center;
 					flex-direction: row;
 					justify-content: space-around;
+					margin-left: 150px;
+					margin-right: 150px;
+					margin-top: 30px;
 					.left {
-						background-color: themed("bgSoft");
+						
 						border-radius: 20px;
 						padding: 20px;
-						width: 800px;
+						width: 700px;
 						height: 200px;
+						margin-left: 150px;
+						margin-top: 20px;
+						transition: transform .2s;
+						cursor: pointer;
 					}
+					.left:hover {
+						transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+					  }
 					.right {
-						background-color: themed("bgSoft");
+						
 						border-radius: 20px;
 						padding: 20px;
-						width: 800px;
+						width: 700px;
 						height: 200px;
+						margin-right: 150px;
+						//margin-left: 10px;
+						margin-top: 20px;
+						transition: transform .2s;
+						cursor: pointer;
 					}
+
+					.right:hover {
+						transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+					  }
 				}
 			}
 			.courses {
 				display: flex;
 				flex-direction: column;
+				flex-wrap: wrap;
 				.course {
 					background-color: themed("bgSoft");
 					color: themed("textColor");
 					display: flex;
 					flex-direction: row;
+					margin-top: 20px;
+					margin-left: auto;
+					margin-right: auto;
 					padding: 50px 140px;
 					.content {
 						flex: 1;
@@ -139,31 +185,58 @@
 				}
 			}
 			.news {
+				background-color: themed("darker");
+				display: inline-block;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				padding: 100px;
+				border: 2px solid black;
+				margin-top: 80px;
+				margin-left: auto;
+				margin-right: auto;
+				width: 100%;
+				margin-bottom: 55px;
 				.newshead {
-					padding: 30px 0;
+				
 					font-size: 45px;
 					font-weight: 500;
+					
 				}
 				.newssubhead {
 					// padding: 30px 0;
 					font-size: 25px;
-					padding-bottom: 30px;
+					padding-bottom: 10px;
 					font-weight: 100;
+					margin-top: 15px;
 				}
 				.email {
-					background-color: themed("bgSoft");
-					border: none;
-					width: 30%;
-					padding: 15px 50px;
+					background-color: themed("white");
+					border: 1px solid black;
+					width: 60%;
+					padding: 15px 20px;
+					margin-top: 0;
+					border-radius: 10px;
+					font-size: 15px;
+				}
+				.text {
+					background-color: themed("white");
+					border: 1px solid black;
+					width: 60%;
+					padding: 15px 20px;
+					border-radius: 10px;
+					font-size: 15px;
+				}
+				.phone {
+					background-color: themed("white");
+					border: 1px solid black;
+					width: 60%;
+					padding: 15px 20px;
 					border-radius: 10px;
 					font-size: 15px;
 				}
 				.button {
-					margin: 50px 0;
+					margin-top: 50px;
 					border: none;
 					background-color: themed("logo");
 					padding: 15px 35px;

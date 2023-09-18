@@ -1,0 +1,121 @@
+*{
+    margin:0;
+    padding:0;
+}
+.header{
+    min-height: 70vh;
+    width:100%;
+    background-image: linear-gradient(rgba(210, 214, 228, 0.7),rgba(121, 124, 135, 0.7)), url(./images/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.text-box{
+    width:90%;
+    color: #16093a;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    font-weight: 700;
+    color:#150e47;
+}
+@media(max-width:700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+
+}
+ .stateSCL{
+    width:80%;
+    margin: auto;
+    text-align: center;
+    padding: top;
+    margin-top: 20px;
+    
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+    
+}
+p{
+    color:#777;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.stateSCL-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    background: #e9e9f6;
+    transition: 0.5s;
+    box-shadow: 5px 7px 10px 0px rgba(121, 124, 135, 1);
+}
+.stateSCL-col img{
+    width:100%;
+    border-radius: 10px;
+}
+.stateSCL-col p{
+    padding:0;
+}
+.stateSCL-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+} 
+.stateSCL-col:hover{
+    /* box-shadow: 5px 7px; */
+   box-shadow: 0 0 20px 0px rgba(0,0,0,0.7);
+}
+.nationSCL-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    background: #fff3f3;
+    transition: 0.5s;
+}
+.nationSCL-col img{
+    width:100%;
+    border-radius: 10px;
+}
+.nationSCL-col p{
+    padding:0;
+}
+.nationSCL-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+} 
+.nationSCL-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+.nationSCL{
+    width:80%;
+    margin: auto;
+    text-align: center;
+    padding: top;
+    margin-top: 20px;
+}
