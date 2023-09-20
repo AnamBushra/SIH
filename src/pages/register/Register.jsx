@@ -5,7 +5,7 @@ import axios from "axios";
 
 const Register = () => {
 	const [inputs, setInputs] = useState({
-		username: "",
+		
 		email: "",
 		password: "",
 		name: "",
@@ -30,8 +30,8 @@ const Register = () => {
 	const handleNext = (e) => {
 		e.preventDefault();
 		setErr("");
-		if (inputs.username.length === 0) setErr("Provide Username");
-		else if (inputs.name.length === 0) setErr("Provide Name");
+		
+		 if (inputs.name.length === 0) setErr("Provide Name");
 		else if (inputs.email.length === 0) setErr("Provide Email");
 		else if (inputs.graduationyear.length === 0) setErr("Provide Graduation Year");
 		else if (inputs.password.length === 0) setErr("Provide Password");
@@ -126,7 +126,7 @@ const Register = () => {
 					<h1>Register</h1>
 					<form>
 						<input type="text" placeholder="Name" name="name" onChange={handleChange} value={inputs.name} />
-						<input type="text" placeholder="Username" name="username" onChange={handleChange} value={inputs.username} />
+						{/* <input type="text" placeholder="Username" name="username" onChange={handleChange} value={inputs.username} /> */}
 						<input type="email" placeholder="Email" name="email" onChange={handleChange} value={inputs.email} />
 						<input type="password" placeholder="Password" name="password" onChange={handleChange} value={inputs.password} />
 						<input type="password" placeholder="Confirm Password" name="confirmpassword" onChange={handleChange} value={inputs.confirmpassword} />
@@ -134,7 +134,7 @@ const Register = () => {
 						{err && <span className="error">{err}</span>}
 						<button onClick={handleNext}>Next</button>
 						<span className="logincheck">
-							Already Resgistered?
+							Already Registered?
 							<Link to="/login" className="link">
 								Login
 							</Link>

@@ -1,4 +1,5 @@
 import "./home.scss";
+import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import img1 from "./1c.png"
@@ -11,6 +12,7 @@ import img7 from './4a.png'
 import img8 from './1d.png'
 import img9 from './2d.png'
 import img10 from './3d.png'
+import img11 from "./pic.png"
 
 const responsive = {
     
@@ -50,7 +52,9 @@ const Home = () => {
 				<div className="services">
 					<div className="upper">
 						<div className="left">
+							
 							<img src={img4} alt="" style={{borderRadius:"10%"}}/>
+							
 						</div>
 						<div className="right">
 							<img src={img5} alt="" style={{borderRadius:"10%"}}/>
@@ -58,7 +62,9 @@ const Home = () => {
 					</div>
 					<div className="lower">
 						<div className="left">
+						<Link to="/scholarship">
 							<img src={img6} alt=""style={{borderRadius:"10%"}} />
+							</Link>
 						</div>
 						<div className="right">
 							<img src={img7} alt="" style={{borderRadius:"10%"}}/>
@@ -82,21 +88,22 @@ const Home = () => {
 						</div>
 					</div>
 				</div> */}
-              <div className="row" style={{marginLeft:"50px",marginTop:"90px"}}>
+				<div className="container">
+              <div className="row" style={{marginTop:"150px"}}>
 				<div className="col-md-4 my-3">
-			  <div class="card" style={{width:"380px",border:"none",backgroundColor:"#F8F0E5"}}>
-  <img src={img8} class="card-img-top" alt="..."/>
-  <div class="card-body">
-    <h5 class="card-title">Daily classes</h5>
-    <p class="card-text">Chat with educators, ask questions, answer live polls, and get your doubts cleared - all while the class is going on</p>
+			  <div className="card h-100" style={{width:"380px",border:"none",backgroundColor:"#F8F0E5"}}>
+  <img src={img8} className="card-img-top" alt="..."/>
+  <div className="card-body">
+    <h5 className="card-title">Daily classes</h5>
+    <p className="card-text">Chat with educators, ask questions, answer live polls, and get your doubts cleared - all while the class is going on</p>
     
   </div></div></div>
   <div className="col-md-4 my-3">
-  <div class="card" style={{width:"380px",border:"none",backgroundColor:"#F8F0E5"}}>
-  <img src={img9} class="card-img-top" alt="..."/>
-  <div class="card-body">
-    <h5 class="card-title">Practice and revise</h5>
-    <p class="card-text">Learning isn't just limited to classes with our practice section, mock tests and lecture notes shared as PDFs for your revision
+  <div className="card h-100" style={{width:"380px",border:"none",backgroundColor:"#F8F0E5"}}>
+  <img src={img9} className="card-img-top" alt="..."/>
+  <div className="card-body">
+    <h5 className="card-title">Practice and revise</h5>
+    <p className="card-text">Learning isn't just limited to classes with our practice section, mock tests and lecture notes shared as PDFs for your revision
 
 </p>
     
@@ -104,19 +111,19 @@ const Home = () => {
 </div>
 <div className="col-md-4 my-3">
 
-<div class="card" style={{width:"380px",border:"none",backgroundColor:"#F8F0E5"}}>
-  <img src={img10} class="card-img-top" alt="..."/>
-  <div class="card-body">
-    <h5 class="card-title">Learn anytime, anywhere</h5>
-    <p class="card-text">Register and get access to all our classes to watch from the comfort of any of your devices
+<div className="card h-100" style={{width:"380px",border:"none",backgroundColor:"#F8F0E5"}}>
+  <img src={img10} className="card-img-top" alt="..."/>
+  <div className="card-body">
+    <h5 className="card-title">Learn anytime, anywhere</h5>
+    <p className="card-text">Register and get access to all our classes to watch from the comfort of any of your devices
 </p>
    
   </div>
   </div>
 </div>
-
+</div>
 			  </div>
-
+         
 				<div className="news">
 					<div className="newshead">Reach Out To Us</div>
 					<div className="newssubhead">Enter your Email Address</div>
@@ -127,7 +134,13 @@ const Home = () => {
 					<input type="phone" className="phone" placeholder="Phone" />
 					<button className="button">Submit</button>
 				</div>
-			</div>
+				
+				
+				
+					{/* <img src={img11} alt="" /> */}
+					
+				</div>
+			
 		</div>
 	);
 };

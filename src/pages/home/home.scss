@@ -90,7 +90,7 @@
 						cursor: pointer;
 					}
 					.left:hover {
-						transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+						transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 					  }
 					.right {
 					
@@ -105,7 +105,7 @@
 						cursor: pointer;
 					}
 					.right:hover {
-						transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+						transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 					  }
 				}
 				.lower {
@@ -129,7 +129,7 @@
 						cursor: pointer;
 					}
 					.left:hover {
-						transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+						transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 					  }
 					.right {
 						
@@ -145,7 +145,7 @@
 					}
 
 					.right:hover {
-						transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+						transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 					  }
 				}
 			}
@@ -185,22 +185,23 @@
 				}
 			}
 			.news {
-				background-color: themed("darker");
+				background-color: themed("bgsoft");
 				display: inline-block;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				padding: 100px;
 				border: 2px solid black;
-				margin-top: 80px;
+				margin-top: 200px;
 				margin-left: auto;
 				margin-right: auto;
-				width: 100%;
+				width: 55%;
 				margin-bottom: 55px;
 				.newshead {
 				
 					font-size: 45px;
 					font-weight: 500;
+					
 					
 				}
 				.newssubhead {

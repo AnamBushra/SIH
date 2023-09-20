@@ -20,11 +20,11 @@ const Navbar = (props) => {
 	};
     
 	return (
-		<nav className="navbar navbar-expand-lg" style={{backgroundColor:"#25274D"}}>
+		<nav className="navbar navbar-expand-lg" style={{backgroundColor:"#FFFFFF"}}>
   <div className="container-fluid">
   <a className="navbar-brand" href="#"><img className='logo' height="50px" width="50px" style={{borderRadius:"50%"}} src={img3}/></a>
 
-    <a className="navbar-brand" href="#" style={{color:"#EEEEEE"}}>{props.lang==="eng"?"EduConnect":"എഡ്‌മൿട്"} </a>
+    <a className="navbar-brand" href="/" style={{color:"black"}}>{props.lang==="eng"?"EduConnect":"എഡ്‌മൿട്"} </a>
     {/* <li className="nav-item dropdown" style={{backgroundColor:"#053B50"}}>
           <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{backgroundColor:"#053B50"}}>
 		  <img src={img4} alt="" height="50px" width="70px" style={{borderRadius:"50%"}}/>
@@ -39,13 +39,15 @@ const Navbar = (props) => {
 		
 		<div className="wrapper">
   <input id="toggler" type="checkbox" className="check"/>
-  <label for="toggler">
+  <label htmlFor="toggler">
+  <div className="d-flex" style={{justifyContent:"flex-end",position:"absolute",right:"0"}}>
+          <span className="badge rounded-pill text-bg-danger" >3+</span></div>
     <img src={img4} alt="" height="50px" width="70px"/>
   </label>
   <div className="dropdown">
-    <p>Shame Awareness: A Guide to Individual and Societal Transformation</p> <hr />
-    <p>sih postponed to 23rd september</p> <hr />
-    <p>Shame Awareness: A Guide to Individual and Societal Transformation</p>
+    <p className="lines">Shame Awareness: A Guide to Individual and Societal Transformation</p> 
+    <p className="lines">sih postponed to 23rd september</p> 
+    <p className="lines">Shame Awareness: A Guide to Individual and Societal Transformation</p>
   </div>
 </div>
 
@@ -59,8 +61,8 @@ const Navbar = (props) => {
           <ul className="navbar-nav">
 			<li className="nav-item mt-3">
 			<div className={`form-check form-switch text-dark`} >
-  <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.handleLang}/>
-  <label className="form-check-label" htmlFor="flexSwitchCheckDefault" style={{color:"#EEEEEE"}}>{props.lang==="eng"?"മലയാളം":"English"}</label>
+  <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" style={{opacity:"0"}} />
+  <label className="form-check-label" htmlFor="flexSwitchCheckDefault" style={{color:"black",cursor:"pointer"}} onClick={props.handleLang}><u>{props.lang==="eng"?"മലയാളം":"English"}</u></label>
 </div>
 			</li>
             <li className="nav-item">
@@ -72,7 +74,7 @@ const Navbar = (props) => {
 			
             <div className="wrapper">
 			<input id="toggler2" type="checkbox" className="check"/>
-  <label for="toggler2">
+  <label htmlFor="toggler2">
 
 					<img 
                     src={img}
@@ -80,13 +82,15 @@ const Navbar = (props) => {
                     height="50" style={{borderRadius:"50%"}}/>
                 
   </label>
-  <div className="dropdown">
-    <a href="/" style={{whiteSpace:"nowrap"}}>{props.lang==="eng"?"Profile":"പ്രൊഫൈൽ"}</a>
-    <a href="/" style={{whiteSpace:"nowrap"}}>{props.lang==="eng"?"All Courses":"എല്ലാ കോഴ്സുകളും"}</a> 
-    <a href="/" style={{whiteSpace:"nowrap"}}>{props.lang==="eng"?"Job Portal":"തൊഴിൽ പോർട്ടൽ"}</a> 
-    <a href="/" style={{whiteSpace:"nowrap"}}>{props.lang==="eng"?"Scholarship":"സ്കോളർഷിപ്പ്"}</a> 
-    <a href="/" style={{whiteSpace:"nowrap"}}>{props.lang==="eng"?"Discussion Forum":"ചർച്ചാ ഫോറം"}</a> 
-    <a href="/" style={{whiteSpace:"nowrap"}}>{props.lang==="eng"?"Logout":"പുറത്തുകടക്കുക"}</a> 
+  <div className="dropdown" id="dropdown2">
+    <span style={{whiteSpace:"nowrap",cursor:"pointer"}}>{props.lang==="eng"?"Profile":"പ്രൊഫൈൽ"}</span>
+    <span style={{whiteSpace:"nowrap",cursor:"pointer"}}>{props.lang==="eng"?"All Courses":"എല്ലാ കോഴ്സുകളും"}</span> 
+    <span style={{whiteSpace:"nowrap",cursor:"pointer"}}>{props.lang==="eng"?"Job Portal":"തൊഴിൽ പോർട്ടൽ"}</span> 
+	<Link to="/scholarship" style={{textDecoration:"none",color:"black"}}>
+    <span style={{whiteSpace:"nowrap",cursor:"pointer"}}>{props.lang==="eng"?"Scholarship":"സ്കോളർഷിപ്പ്"}</span> 
+	</Link>
+    <span style={{whiteSpace:"nowrap",cursor:"pointer"}}>{props.lang==="eng"?"Discussion Forum":"ചർച്ചാ ഫോറം"}</span> 
+    <span style={{whiteSpace:"nowrap",cursor:"pointer"}}>{props.lang==="eng"?"Logout":"പുറത്തുകടക്കുക"}</span> 
   </div>
                 </div>
           </ul>

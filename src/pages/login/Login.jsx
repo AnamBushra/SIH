@@ -22,7 +22,7 @@ const Login = () => {
 						{err && <span className="error">{err}</span>}
 						<button>Login</button>
 						<span className="registercheck">
-							Not Resgistered?
+							Not Registered?
 							<Link to="/register" className="link">
 								Register
 							</Link>
